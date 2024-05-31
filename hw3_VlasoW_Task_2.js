@@ -1,6 +1,7 @@
 // Task 2
 // 1. x^2 - 6x + 9 = 0
 
+
 const a1 = 1, b1 = -6, c1 = 9; // Задаем переменные 
 const discriminant1 = b1**2 - 4*a1*c1; // формула дискриминанта
 if (discriminant1 > 0) {
