@@ -12,22 +12,51 @@
 //   454 548 = 454,5 Kb
 //   1 454 548 = 1,5 Mb
 
-function convertByte(bytes){
-    if (bytes < 1024) {
-        return bytes + "byte"
-    } else if (bytes < 1024**2) {
-        return (bytes / 1024).toFixed(1) + "Kb"
-    } else if (bytes < 1024**3) {
-        return (bytes / (1024**2)).toFixed(1) + "Mb" 
-    } else if (bytes < 1024**4) {
-        return (bytes / (1024**3)).toFixed(1) + "Gb"
+// function convertByte(bytes){
+//     if (bytes < 1024) {
+//         return bytes + "byte"
+//     } else if (bytes < 1024**2) {
+//         return (bytes / 1024).toFixed(1) + "Kb"
+//     } else if (bytes < 1024**3) {
+//         return (bytes / (1024**2)).toFixed(1) + "Mb" 
+//     } else if (bytes < 1024**4) {
+//         return (bytes / (1024**3)).toFixed(1) + "Gb"
+//     } else {
+//         return (bytes / (1024**4)).toFixed(1) + "Tb"
+//     }  
+// }
+// console.log(convertByte(4548))
+// console.log(convertByte(4545488))  
+// console.log(convertByte(1454548))
+
+function convertByte(bytes) {
+  let unit = 'Bytes'; 
+  let size = bytes;
+
+  
+  for (let i = 0; size >= 1024; size /= 1024) {
+    if (unit === 'Bytes') {
+      unit = 'KB';
+    } else if (i === 'KB') {
+      unit = 'MB';
+    } else if (i === 'MB') {
+      unit = 'GB';
+    } else if (i === 'GB') {
+      unit = 'TB';
     } else {
-        return (bytes / (1024**4)).toFixed(1) + "Tb"
-    }  
+      break; 
+    }
+  }
+  size = size.toFixed(1);
+
+  return size + ' ' + unit;
 }
-console.log(convertByte(4548))
-console.log(convertByte(4545488))  
-console.log(convertByte(1454548))
+
+console.log(convertByte(4548));        
+console.log(convertByte(454548));      
+console.log(convertByte(1454548));     
+console.log(convertByte(16565846));    
+
 
 //2
 function triangl(height) {

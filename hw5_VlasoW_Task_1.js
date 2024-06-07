@@ -6,7 +6,8 @@ for (let i = 10; i >= 0; i-- ) {
 
 //2
 for (let i = 1; i <= 5; i++) {
-    console.log(":)".repeat(i))
+    const smile = ":)"
+    console.log(smile.repeat(i))
 }
 
 // через while
@@ -14,6 +15,7 @@ for (let i = 1; i <= 5; i++) {
 let i = 1
 
 while(i <= 5){
-    console.log(":)".repeat(i))
+    const smile = ":)"
+    console.log(smile.repeat(i))
     i++
 }
