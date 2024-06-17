@@ -38,6 +38,7 @@ function calculatePrices(prices) {
 calculatePrices(prices);
 // Итого: 84995 $, средняя цена товара 3391.4 $
 
+
 // 3
 function countVowels(word) {
   const vowels = 'aeiouy';

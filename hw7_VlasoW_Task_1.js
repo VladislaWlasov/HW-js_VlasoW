@@ -4,7 +4,6 @@ function getOnlyNumbers(arrayOnAnyValues) {
   });
   return result;
 }
-
 const arr = [NaN, 1, true, 5, "hello", undefined, 15.5, {}, []];
 const numbersOnly = getOnlyNumbers(arr);
 console.log(numbersOnly); // [1, 5, 15.5]
